@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2029-5</title>
+<style>
+body{
+  background: grey;
+}
+img{
+position: absolute;
+  left:0px;
+  top:0px;
+}
+input{
+  width: 50px;
+  height: 10px;
+  font-size:8px;
+}
+
+.correct{
+  background:lime;
+}
+.incorrect{
+  background:red;
+}
+</style>
+</head>
+<body translate="no">
+<img src="https://magentaskateboards.com/wp-content/uploads/2016/06/SUMMER16.jpg" alt="magenta" width="1500px" />
+<input style="position:absolute;left:160px;top:20px;" type="text" data-correct="Soy Panday and Vivien Feil" />
+<input style="position:absolute;left:310px;top:20px;" type="text" data-correct="Jimmy Lannon and Leo Valls" />
+<input style="position:absolute;left:465px;top:20px;" type="text" data-correct="Ben Gore and Zach Lyons" />
+<input style="position:absolute;left:935px;top:20px;" type="text" data-correct="Stefan Marx Collab" />
+<input style="position:absolute;left:1090px;top:20px;" type="text" data-correct="Aymeric Nocus Collab" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.clear();
+console.log("hello world");
+
+$("input").change(onChange);
+function onChange(evt) {
+  let correct = $(this).data("correct");
+  let answer = $(this).val();
+  console.log(correct, answer);
+  if (correct == answer) {
+    $(this)
+      .removeClass("incorrect")
+      .addClass("correct");
+  } else{
+    $(this)
+      .removeClass("correct")
+      .addClass("incorrect");
+  }
+}
+    </script>
+</body>
+</html>
